@@ -43,9 +43,9 @@ export const getMovies = async (path) => {
   try {
     let url = `https://api.themoviedb.org/3${path}`;
     const response = await fetch(url);
-    return await response.json();
+    return response.json();
   } catch (error) {
-    console.log("error getMovies: ", error);
+    console.log(error);
   }
 };
 
